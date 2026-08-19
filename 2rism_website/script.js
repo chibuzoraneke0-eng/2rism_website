@@ -18,37 +18,37 @@ const popular_destinations = [
   {
     title: "Big Sur",
     subtitle: "Carlifornia, USA",
-    image: "images/big.png",
+    image: "Images/big.jpg",
   },
 
   {
     title: "Prescott",
     subtitle: "Arizona, USA",
-    image: "images/arizona.png",
+    image: "Images/arizona.jpg",
   },
 
   {
     title: "Fort Mayers",
     subtitle: "Florida, USA",
-    image: "images/fort.png",
+    image: "Images/fort.jpg",
   },
 
   {
     title: "Tucson",
     subtitle: "Arizona, USA",
-    image: "images/tucson.png",
+    image: "Images/tucson.jpg",
   },
 
   {
     title: "St. Joseph",
     subtitle: "Michigan, USA",
-    image: "images/st.png",
+    image: "Images/st.jpg",
   },
 
   {
     title: "Madrid",
     subtitle: "Spain",
-    image: "images/madrid.png",
+    image: "Images/madrid.jpg",
   },
 ];
 
@@ -56,61 +56,61 @@ const Hotels_and_Resturants = [
   {
     title: "Monastero Santa Rosa Hotel",
     subtitle: "Salerno, Italy",
-    image: "images/rosa.png",
+    image: "Images/rosa.jpg",
     rating: 5
   },
 
   {
     title: "Grand Hotel Tremezzo",
     subtitle: "Lake Coma, Italy",
-    image: "images/lake.png",
+    image: "Images/lake.jpg",
     rating: 5
   },
 
   {
     title: "The Oberoi Udaivilas, Udaipur",
     subtitle: "Udaipur, India",
-    image: "images/img9.png",
+    image: "Images/img9.jpg",
     rating: 5
   },
 
   {
     title: "AKA Beverly Hills",
     subtitle: "Los Angeles, United States",
-    image: "images/img10.png",
+    image: "Images/img10.jpg",
     rating: 5
   },
 ];
 
 const Travel_Tips_and_advice = [
   {
-    image: "images/img11.png",
+    image: "Images/img11.jpg",
   },
 
   {
-    image: "images/img12.png",
+    image: "Images/img12.jpg",
   },
 ];
 
 const Activities = [
   {
     title: "Sailing",
-    image: "images/sailing.jpg",
+    image: "Images/sailing.jpg",
   },
 
   {
     title: "Climbing",
-    image: "images/climbing.jpg",
+    image: "Images/climbing.jpg",
   },
 
   {
     title: "Skiing",
-    image: "images/skiing.jpg",
+    image: "Images/skiing.jpg",
   },
 
   {
     title: "Hiking",
-    image: "images/hiking.jpg",
+    image: "Images/hiking.jpg",
   },
 ];
 
@@ -120,7 +120,7 @@ destinationDisplay.innerHTML = popular_destinations
     .slice(0, 6)
     .map(d => `
 <div class="destination_card" >
-<img src="${d.image}" alt="${d.name} image" />
+<img src="${d.image}" alt="${d.name} Images" />
 <h4> ${d.title} </h4>
 <h5> ${d.subtitle} </h5>
 </div>
@@ -133,12 +133,12 @@ hotelsDisplay.innerHTML = Hotels_and_Resturants
 .slice(0, 4)
 .map(d => `
     <div class="destination_card" >
-<img src="${d.image}" alt="${d.title} image" />
+<img src="${d.image}" alt="${d.title} Images" />
 <h4> ${d.title} </h4>
 <h5> ${d.subtitle} </h5>
 
 ${Array.from({ length: d.rating}, (_, index) => (
-`
+  `
 <span key={index}>
 <i class="bi bi-star-fill"></i>
  </span>`
@@ -154,7 +154,7 @@ ${Array.from({ length: d.rating}, (_, index) => (
     .map(d => {
       return `
         <div class="activity_card">
-          <img src="${d.image}" alt="${d.title} image" />
+          <img src="${d.image}" alt="${d.title} Images" />
           <h4>${d.title}</h4>
         </div>
       `;
