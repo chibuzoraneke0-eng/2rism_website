@@ -187,6 +187,11 @@ nav {
   border-radius: inherit;
 }
 
+section {
+  margin-bottom: 60px;
+  padding: 0px 20px;
+}
+
 .hero-section {
   width: 100%;
   height: 80vh;
@@ -256,16 +261,16 @@ nav {
 
 #destinations {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .destination_card {
   width: 100%;
-  height: 240px;
+  height: auto;
 }
 
 .destination_card img {
-  width: 200px;
+  width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 24px;
@@ -273,7 +278,7 @@ nav {
 
 #Hotel_and_Resturants {
   width: 100%;
-  /* padding: 70px 120px; */
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -281,61 +286,58 @@ nav {
 
 #Hotels {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
 
 #Travel_Tips_and_advice {
-  width: 1918px;
-  height: 612px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
 .Tips_advice{
-  width: 50%;
-  height: 50px;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   display: grid;
   gap: 20px;
 }
 
 
 .trips_advice_card {
-  width: 200px;
-  height: 200px;
-  padding: 70px 120px;
-  grid-template-columns: 1fr 1fr;
-  display: grid;
-  gap: 15px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
 }
 
 .trips_advice_card img {
-  object-position: center;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 24px;
-  gap: 10px;
 }
-
+.trips_advice_card h3 {
+  font-size: 16px;
+}
 .activities-div {
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   display: grid;
   gap: 16px;
+  margin-top: 20px;
 }
 .activity_card {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  img {
-    width: 200px;
-    height: 200px;
-    gap: 10px;
-  }
 }
 .activity_card img {
-  object-position: center;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 24px;
 }
@@ -399,7 +401,7 @@ footer {
 
 
 /* media queries  */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   nav {
     width: 100%;
   }
@@ -409,8 +411,7 @@ footer {
   }
 
   .nav-links-container {
-    display: none;
-  }
+    display: none;  }
 
   .profile-display {
     display: none;
@@ -418,5 +419,29 @@ footer {
 
   #menuBtn {
     display: block;
+  }
+
+  #destinations,
+  #Hotels,
+  .Tips_advice,
+  .activities-div{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .search-wrapper {
+    padding: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 480px) {
+    #destinations,
+    #Hotels,
+    .Tips_advice,
+    .activities-div{
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
